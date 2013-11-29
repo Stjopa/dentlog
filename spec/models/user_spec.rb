@@ -3,7 +3,8 @@ require 'spec_helper'
 describe User do
 
   before do
-    @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
+    @user = User.new(name: "Example User", email: "user@example.com", 
+                    password: "foobar", password_confirmation: "foobar")
   end
 
   subject { @user }
@@ -72,7 +73,8 @@ describe User do
 
   describe "when password is not present" do
     before do
-      @user = User.new(name: "Example User", email: "user@example.com", password: " ", password_confirmation: " ")
+      @user = User.new(name: "Example User", email: "user@example.com",
+                             password: " ", password_confirmation: " ")
     end
     it { should_not be_valid }
   end
